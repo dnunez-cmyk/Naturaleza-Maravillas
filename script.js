@@ -1,12 +1,27 @@
-function addTask() {
-    let input = document.getElementById("taskInput");
-    let li = document.createElement("li");
+// Animación sencilla al hacer scroll
 
-    li.textContent = input.value;
-    li.onclick = function() {
-        li.style.textDecoration = "line-through";
-    };
+const imagenes = document.querySelectorAll("img");
 
-    document.getElementById("taskList").appendChild(li);
-    input.value = "";
-}
+window.addEventListener("scroll", () => {
+
+    imagenes.forEach((img) => {
+
+        const posicion = img.getBoundingClientRect().top;
+
+        if (posicion < window.innerHeight - 100) {
+
+            img.style.opacity = "1";
+            img.style.transform = "translateY(0)";
+        }
+
+    });
+
+});
+
+imagenes.forEach((img) => {
+
+    img.style.opacity = "0";
+    img.style.transform = "translateY(50px)";
+    img.style.transition = "1s";
+
+});

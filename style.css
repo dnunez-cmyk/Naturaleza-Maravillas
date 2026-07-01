@@ -1,13 +1,153 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background: #f4f4f4;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-h1 {
-    color: #3B82F6;
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+    background:black;
+    color:white;
+
 }
 
-li {
-    margin: 10px;
+.hero{
+
+    height:100vh;
+
+    background:url("imagenes/fondo.jpg") center center/cover;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px;
+
+}
+
+.hero h1{
+
+    font-size:60px;
+
+    margin:20px;
+
+}
+
+.hero p{
+
+    font-size:22px;
+
+}
+
+.hero h4{
+
+    margin-top:40px;
+
+    color:#ddd;
+
+}
+
+.lugar{
+
+    width:80%;
+
+    margin:auto;
+
+    padding:70px 0;
+
+}
+
+.lugar h2{
+
+    color:#4CAF50;
+
+    margin-bottom:25px;
+
+}
+
+.texto{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    margin-bottom:30px;
+
+    line-height:1.8;
+
+}
+
+img{
+
+    width:100%;
+
+    border-radius:10px;
+
+    transition:.4s;
+
+}
+
+img:hover{
+
+    transform:scale(1.03);
+
+}
+
+.importancia{
+
+    text-align:center;
+
+    padding:100px 10%;
+
+}
+
+.importancia h1{
+
+    font-size:45px;
+
+    margin:40px 0;
+
+    color:#4CAF50;
+
+}
+
+.importancia p{
+
+    font-size:22px;
+
+    margin:20px 0;
+
+}
+
+.importancia h3{
+
+    margin-top:80px;
+
+    color:#FF9800;
+
+}
+
+@media(max-width:900px){
+
+.texto{
+
+grid-template-columns:1fr;
+
+}
+
+.hero h1{
+
+font-size:40px;
+
+}
+
 }
